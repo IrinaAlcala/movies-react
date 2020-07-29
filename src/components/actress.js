@@ -1,13 +1,13 @@
 import React from 'react';
-import {ActorList} from '../data/actors';
+import {ActressList} from '../data/actress';
 import { Link } from 'react-router-dom';
 
-const Actors = (props) => {
-    let actors = ActorList.map((actor) => {
+const Actress = (props) => {
+    let actress = ActressList.map((actress) => {
       return (
         <div className="actor-container">
-          <Link to={`/actors/${actor.url}`}><div className="actor-image" style={{ backgroundImage: "url(" + actor.img_src + ")" }}></div></Link>
-          <h3>{actor.name}</h3>
+          <Link to={`/actors/${actress.url}`}><div className="actor-image" style={{ backgroundImage: "url(" + actress.img_src + ")" }}></div></Link>
+          <h3>{actress.name}</h3>
         </div>
       );
     });
@@ -17,10 +17,10 @@ const Actors = (props) => {
         <div><Link className="back" to="/">BACK</Link></div>
         <h2>{props.title}</h2>
         <div className="container">
-          {actors}
+          {actress}
         </div>
       </div>
     );
 }
 
-export default Actors;
+export default Actress;
